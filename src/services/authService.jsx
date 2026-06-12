@@ -1,12 +1,10 @@
-import axios from "axios";
-
-const API_URL = `${import.meta.env.VITE_API_URL}`;
+import api from "./api";
 
 export const signup = async (userData) => {
-    return axios.post(`${API_URL}/api/auth/signup`,userData);
+    return api.post("auth/signup",userData);
 }
 
 export const login = async (loginData) => {
-    return axios.post(`${API_URL}/api/auth/login`,loginData);
+    return api.post("auth/login",loginData);
 }
 

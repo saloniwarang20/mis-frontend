@@ -9,7 +9,6 @@ const Auth = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [loading, setLoading] = useState(false);
-    const [message, setMessage] = useState("");
 
     const handleName = (e) => {
         setFullName(e.target.value)
@@ -36,7 +35,6 @@ const Auth = () => {
                 navigate("/dashboard")
             }else{
                 await signup({fullName, email, password});
-                setMessage("User registered successfully");
                 setState("login")
             }
             
@@ -51,13 +49,6 @@ const Auth = () => {
   return (
     <div className="container-fluid vh-100 bg-light">
         <div className="row h-100">
-
-
-            {/* {message && (
-                <div className="alert alert-success">
-                    {message}
-                </div>
-            )} */}
 
             {/* banner */}
             <div className="col-md-6 bg-primary-subtle rounded-end-5 text-primary d-flex flex-column justify-content-center align-items-center ">
