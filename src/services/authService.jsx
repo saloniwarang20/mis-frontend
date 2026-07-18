@@ -1,10 +1,10 @@
 import api from "./api";
 
-export const signup = async (userData) => {
+export const signup = (userData) => {
     return api.post("auth/signup",userData);
 }
 
-export const login = async (loginData) => {
+export const login = (loginData) => {
     return api.post("auth/login",loginData);
 }
 
