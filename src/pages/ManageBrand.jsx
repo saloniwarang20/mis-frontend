@@ -3,6 +3,12 @@ import { groupCount, viewAllGroup } from "../services/groupService"
 import { totalChain, viewAllChain } from "../services/chainService"
 import { addBrand, deleteBrand, totalBrand, updateBrand, viewBrand } from "../services/brandService"
 
+const normalizeList = (value) => {
+  if (Array.isArray(value)) return value
+  if (value && Array.isArray(value.data)) return value.data
+  return []
+}
+
 const ManageBrand = () => {
   const [countGroup, setCountGroup] = useState({
     total:0
@@ -23,7 +29,7 @@ const ManageBrand = () => {
   const fetchGroups = async () => {
     try{
       const res = await viewAllGroup();
-      setGroups(res.data)
+      setGroups(normalizeList(res?.data))
     }catch(err){
       console.error(err);
     }
@@ -32,8 +38,7 @@ const ManageBrand = () => {
   const fetchChains = async () => {
     try{
       const res = await viewAllChain();
-      console.log(res.data)
-      setChains(res.data)
+      setChains(normalizeList(res?.data))
     }catch(err){
       console.error(err)
     }
@@ -42,8 +47,7 @@ const ManageBrand = () => {
   const fetchBrands = async () => {
     try{
       const res = await viewBrand();
-      
-      setBrands(res.data)
+      setBrands(normalizeList(res?.data))
     }catch(err){
       console.error(err)
     }
