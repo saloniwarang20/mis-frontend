@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { groupCount, viewAllGroup } from "../services/groupService"
+import { groupCount } from "../services/groupService"
 import { totalChain, viewAllChain } from "../services/chainService"
 import { addBrand, deleteBrand, totalBrand, updateBrand, viewBrand } from "../services/brandService"
 
@@ -16,7 +16,6 @@ const ManageBrand = () => {
   const [countChain, setCountChain] = useState(0)
   const [countBrand, setCountBrand] = useState(0)
 
-  const [groups, setGroups] = useState([])
   const [chains, setChains] = useState([])
   const [brands, setBrands] = useState([])
 
@@ -26,14 +25,6 @@ const ManageBrand = () => {
   const [newBrandName, setNewBrandName] = useState("")
   const [newChainId, setNewChainId] = useState("")
 
-  const fetchGroups = async () => {
-    try{
-      const res = await viewAllGroup();
-      setGroups(normalizeList(res?.data))
-    }catch(err){
-      console.error(err);
-    }
-  }
 
   const fetchChains = async () => {
     try{
@@ -131,7 +122,6 @@ const ManageBrand = () => {
 
 
   useEffect(()=>{
-    fetchGroups(),
     fetchChains(),
     fetchBrands(),
     fetchCounts()
@@ -269,7 +259,8 @@ const ManageBrand = () => {
             ))}
           </tbody>
         </table>
-      </div>  
+      </div>
+        
       </div>
     </div>
 
