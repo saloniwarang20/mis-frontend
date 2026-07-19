@@ -174,7 +174,7 @@ const ManageChain = () => {
             <button className="btn btn-primary" onClick={handleAdd}>Add Chain</button>
           </div>
 
-        </div>
+      </div>
 
         {/* chain table */}
       <div className="mt-3 p-4 border rounded bg-light">
@@ -263,7 +263,8 @@ const ManageChain = () => {
             ))}
           </tbody>
         </table>
-      </div>  
+      </div>
+        
       </div>
     </div>
   )
