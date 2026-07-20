@@ -12,7 +12,7 @@ const Sidebar = () => {
     {path: "/manage-brand",label:"Manage Brands"},
     {path: "/manage-subzone",label:"Manage Sub Zones"},
     {path: "/manage-estimate",label:"Manage Estimate"},
-    {path: "/manage-invoke",label:"Manage invoke"}
+    {path: "/manage-invoice",label:"Manage Invoice"}
   ]
   return (
     <div className="col-md-2 bg-primary text-white vh-100 position-fixed start-0 top-0 d-flex flex-column align-items-center pt-5 p-4"

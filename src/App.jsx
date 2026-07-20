@@ -8,7 +8,7 @@ import ManageChain from './pages/ManageChain'
 import ManageBrand from './pages/ManageBrand'
 import ManageSubzone from './pages/ManageSubzone'
 import ManageEstimate from './pages/ManageEstimate'
-import ManageInvoke from './pages/ManageInvoke'
+import ManageInvoice from './pages/ManageInvoice'
 
 const App = () => {
   return (
@@ -51,9 +51,9 @@ const App = () => {
                 <ManageEstimate/>
               </ProtectedRoute> } />
 
-            <Route path="manage-invoke" element={
+            <Route path="manage-invoice" element={
               <ProtectedRoute>
-                <ManageInvoke/>
+                <ManageInvoice/>
               </ProtectedRoute> } />
 
           </Route>

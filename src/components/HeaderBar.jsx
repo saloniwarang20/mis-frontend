@@ -11,7 +11,7 @@ const HeaderBar = () => {
         "/manage-brand":"Manage Brands Section",
         "/manage-subzone":"Manage Sub Zones Section",
         "/manage-estimate":"Manage Estimate Section",
-        "/manage-invoke":"Manage Invoke Section"
+        "/manage-invoice":"Manage Invoice Section"
     }
 
     const handleLogout = () =>{
