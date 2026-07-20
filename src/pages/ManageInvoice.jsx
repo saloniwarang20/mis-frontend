@@ -363,7 +363,6 @@ const ManageInvoice = () => {
                       <th>Zone</th>
                       <th>Total</th>
                       <th>Email</th>
-                      <th>Status</th>
                       <th>Actions</th>
                   </tr>
               </thead>
@@ -402,16 +401,6 @@ const ManageInvoice = () => {
                           invoice.emailId
 
                           }
-
-                      </td>
-
-                      <td>
-
-                          <span className={`badge ${invoice.isActive ? "bg-success":"bg-secondary"}`}>
-
-                              {invoice.isActive ? "Active":"Inactive"}
-
-                          </span>
 
                       </td>
 
